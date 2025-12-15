@@ -297,3 +297,4 @@ class SnakeGame:
 root = tk.Tk()
 game = SnakeGame(root)
 root.mainloop()
+   
