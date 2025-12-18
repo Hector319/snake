@@ -7,7 +7,7 @@ WIDTH = 600
 HEIGHT = 400
 CELL = 20  # Tamaño de cada casilla del grid en píxeles
 
-# Tamaño del tablero en celdas (no en píxeles)
+# Tamaño del tablero en celdas
 ROWS = 10
 COLS = 10
 
@@ -19,7 +19,7 @@ GRID_HEIGHT = ROWS * CELL
 OFFSET_X = (WIDTH - GRID_WIDTH) // 2
 OFFSET_Y = (HEIGHT - GRID_HEIGHT) // 2
 
-# Velocidad del juego (ms entre actualizaciones) y puntuación para ganar
+# Velocidad del juego  y puntuación para ganar
 GAME_SPEED = 200
 WIN_SCORE = 87
 
