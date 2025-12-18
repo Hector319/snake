@@ -54,7 +54,7 @@ class SnakeGame:
         self.direction = "Right"
         self.next_direction = self.direction
 
-        # La serpiente se representa como una lista de tuplas (col, fila)
+        # La serpiente se representa como una lista de tuplas
         self.snake = [(5, 5), (4, 5), (3, 5)]
 
         # Generar tantas manzanas como se hayan configurado
@@ -150,7 +150,7 @@ class SnakeGame:
                 self.state = "win"
                 return
         else:
-            # Si no come, la cola se acorta (la serpiente “avanza”)
+            # Si no come, la cola se acorta
             self.snake.pop()
 
     def draw_grid(self):
@@ -188,12 +188,12 @@ class SnakeGame:
         self.canvas.create_polygon(points, fill="blue")
 
     def draw_game(self):
-        # Redibuja todo el estado del juego (tablero, serpiente, manzanas y textos)
+        # Redibuja todo el estado del juego 
         # Limpiar todo antes de volver a pintar
         self.canvas.delete("all")
         self.draw_grid()
 
-        # Dibujar manzanas (comida) como círculos rojos
+        # Dibujar manzanas como círculos rojos
         for col, row in self.food:
             x1 = OFFSET_X + col * CELL
             y1 = OFFSET_Y + row * CELL
@@ -344,7 +344,7 @@ class SnakeGame:
         elif self.state == "win":
             self.draw_win()
 
-        # Volver a llamar a game_loop tras un retardo (simula el “tick” del juego)
+        # Volver a llamar a game_loop tras un retardo
         self.root.after(GAME_SPEED, self.game_loop)
 
 
